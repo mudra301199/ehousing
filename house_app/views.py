@@ -65,13 +65,13 @@ def send_otp(request, otp_for="register"):
 
     if otp_for == 'activate':
         request.session['otp_for'] = 'activate'
-        subject = f'OTP for eBook Account Activation'
+        subject = f'OTP for house Account Activation'
     elif otp_for == 'recover_pwd':
         request.session['otp_for'] = 'recover_pwd'
-        subject = f'OTP for eBook Password Recovery'
+        subject = f'OTP for house Password Recovery'
     else:
         request.session['otp_for'] = 'register'
-        subject = f'OTP for eBook Registration'
+        subject = f'OTP for house Registration'
 
     email_from = settings.EMAIL_HOST_USER
 
